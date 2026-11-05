@@ -1,5 +1,0 @@
-saves/*
-!saves/.gitkeep
-__pycache__/
-check_lab*.py
-stress_test.py

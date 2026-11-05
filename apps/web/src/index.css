@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Cinzel", Georgia, serif;
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --color-ash-950: #0f0d0c;
+  --color-ash-900: #171412;
+  --color-ash-850: #1d1916;
+  --color-ash-800: #24201c;
+  --color-ash-700: #342e28;
+  --color-ash-600: #4a423a;
+  --color-ash-400: #8a7f74;
+  --color-ash-300: #b3a89c;
+  --color-ash-100: #ece5dc;
+
+  --color-ember-300: #ffb27a;
+  --color-ember-400: #ff8a3d;
+  --color-ember-500: #f06a1d;
+  --color-ember-600: #c94f10;
+
+  --color-tier-scrap: #8f8a85;
+  --color-tier-forged: #e7e2da;
+  --color-tier-tempered: #4ade80;
+  --color-tier-runed: #60a5fa;
+  --color-tier-mythic: #fbbf24;
+}
+
+html,
+body {
+  background: var(--color-ash-950);
+  color: var(--color-ash-100);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  min-height: 100vh;
+  background: radial-gradient(ellipse at 50% -10%, rgb(240 106 29 / 0.12), transparent 60%), var(--color-ash-950);
+}
+
+button {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: not-allowed;
+}
+
+@keyframes hit-flash {
+  0% {
+    background-color: rgb(239 68 68 / 0.35);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+.hit-flash {
+  animation: hit-flash 450ms ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hit-flash {
+    animation: none;
+  }
+}
