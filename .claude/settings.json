@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "ask": [
+      "Bash(git push --delete *)",
+      "Bash(git push * --delete *)",
+      "Bash(git push -d *)",
+      "Bash(git push * -d *)",
+      "Bash(git push * :*)"
+    ]
+  }
+}
